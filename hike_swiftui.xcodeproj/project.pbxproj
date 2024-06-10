@@ -15,6 +15,7 @@
 		8AB2D89B2C1654C400597CA9 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2D89A2C1654C400597CA9 /* CustomBackgroundView.swift */; };
 		8AB2D89E2C16609600597CA9 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2D89D2C16609600597CA9 /* ColorExtension.swift */; };
 		8AB2D8A02C17A33E00597CA9 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2D89F2C17A33E00597CA9 /* CustomButtonView.swift */; };
+		8AB2D8A22C17B29100597CA9 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2D8A12C17B29100597CA9 /* GradientButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8AB2D89A2C1654C400597CA9 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 		8AB2D89D2C16609600597CA9 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		8AB2D89F2C17A33E00597CA9 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		8AB2D8A12C17B29100597CA9 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				8AB2D89D2C16609600597CA9 /* ColorExtension.swift */,
+				8AB2D8A12C17B29100597CA9 /* GradientButtonStyle.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				8AB2D8982C16535700597CA9 /* CardView.swift in Sources */,
 				8AB2D88A2C13473500597CA9 /* hike_swiftuiApp.swift in Sources */,
 				8AB2D8A02C17A33E00597CA9 /* CustomButtonView.swift in Sources */,
+				8AB2D8A22C17B29100597CA9 /* GradientButtonStyle.swift in Sources */,
 				8AB2D89B2C1654C400597CA9 /* CustomBackgroundView.swift in Sources */,
 				8AB2D89E2C16609600597CA9 /* ColorExtension.swift in Sources */,
 			);
