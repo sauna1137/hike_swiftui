@@ -15,9 +15,15 @@ struct GradientButtonStyle: ButtonStyle {
             .label
             .padding(.vertical)
             .padding(.horizontal, 30)
-            .background(LinearGradient(colors: [.customGrayLight,
-                                                .customGrayMedium],
-                                       startPoint: .top, endPoint: .bottom))
-            .clipShape(Capsule())
+            .background(
+                configuration.isPressed ?
+                LinearGradient(colors: [.customGrayLight,
+                                        .customGrayMedium],
+                               startPoint: .top, endPoint: .bottom) :
+                LinearGradient(colors: [.customGrayMedium,
+                                .customGrayLight],
+                       startPoint: .top, endPoint: .bottom))
+
+        .clipShape(Capsule())
     }
 }
