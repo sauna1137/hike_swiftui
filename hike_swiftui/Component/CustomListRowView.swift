@@ -11,12 +11,17 @@ struct CustomListRowView: View {
 
     @State var rowLabel: String
     @State var rowIcon: String
-    @State var rowContent: String
+    @State var rowContent: String? = nil
     @State var rowTintColor: Color
+    @State var rowLinkLabel: String? = nil
+    @State var rowLinkDestination: String? = nil
 
     var body: some View {
         LabeledContent {
-            Text(rowContent)
+            if rowLinkLabel != nil && rowLinkDestination != nil {
+                Link(rowLinkLabel!, destination: URL(string: rowLinkDestination!)!)
+            }
+            Text(rowContent ?? "")
                 .foregroundStyle(Color(.black))
                 .fontWeight(.heavy)
         } label: {
@@ -40,6 +45,6 @@ struct CustomListRowView: View {
         CustomListRowView(rowLabel: "Designer",
                           rowIcon: "paintpallette",
                           rowContent: "john doe",
-                          rowTintColor: .pink)
+                          rowTintColor: .pink, rowLinkLabel: "aaa", rowLinkDestination: "https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/learn/lecture/38673518#overview")
     }
 }

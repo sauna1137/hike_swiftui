@@ -76,6 +76,8 @@ struct Settings: View {
                 CustomListRowView(rowLabel: "Version", rowIcon: "gear", rowContent: "setting", rowTintColor: .secondary)
 
                 CustomListRowView(rowLabel: "Dev", rowIcon: "info", rowContent: "Johe Doe", rowTintColor: .mint)
+
+                CustomListRowView(rowLabel: "web", rowIcon: "globe", rowTintColor: .blue, rowLinkLabel: "web", rowLinkDestination: "https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/learn/lecture/38673518#overviewh")
             }
         }
     }
