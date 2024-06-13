@@ -54,6 +54,29 @@ struct Settings: View {
             // MARK:  アイコン
 
             // MARK: アバウト
+            Section(
+                header: Text("About the app"),
+                footer: HStack {
+                    Spacer()
+                    Text("Copyright All reversed.")
+                    Spacer()
+                }
+                    .padding(.vertical, 8)
+            ) {
+                // 1 Basic
+//                LabeledContent("Application", value: "Hike")
+
+                // 2 advance
+                CustomListRowView(rowLabel: "Application", rowIcon: "apps.iphone", rowContent: "Hike", rowTintColor: .blue)
+
+                CustomListRowView(rowLabel: "Compatibity", rowIcon: "info.circle", rowContent: "iOS", rowTintColor: .red)
+
+                CustomListRowView(rowLabel: "Tech", rowIcon: "swift", rowContent: "Swift", rowTintColor: .orange)
+
+                CustomListRowView(rowLabel: "Version", rowIcon: "gear", rowContent: "setting", rowTintColor: .secondary)
+
+                CustomListRowView(rowLabel: "Dev", rowIcon: "info", rowContent: "Johe Doe", rowTintColor: .mint)
+            }
         }
     }
 }
