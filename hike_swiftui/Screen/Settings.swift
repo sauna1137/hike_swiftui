@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct Settings: View {
+
+    private let altanateAppIcons: [String] =
+    [
+        "AppIcon-Backpack",
+        "AppIcon-Camera",
+        "AppIcon-Campfire",
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Mushroom"
+    ]
+
     var body: some View {
         List {
             // MARK: ヘッダー
@@ -52,6 +63,37 @@ struct Settings: View {
             } // ヘッダー
             .listRowSeparator(.hidden)
             // MARK:  アイコン
+
+            Section(header: Text("Altanate app icons")) {
+
+                ScrollView(.horizontal) {
+                    HStack(spacing: 12) {
+                        ForEach(altanateAppIcons.indices, id: \.self) { item in
+                            Button {
+                                print("tappIcon")
+                                UIApplication.shared.setAlternateIconName(altanateAppIcons[item]) { error in
+                                    if error != nil {
+                                        print("set icon error")
+                                    }
+                                }
+                            } label: {
+                                Image("\(altanateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 16, height: 16)))
+                            }
+                        .buttonStyle(.borderless)
+                        }
+                    }
+                }
+
+                Text("Choose your favorite app icons from the collection above")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(Color(.secondaryLabel))
+                    .font(.footnote)
+            }.listRowSeparator(.hidden)
 
             // MARK: アバウト
             Section(
